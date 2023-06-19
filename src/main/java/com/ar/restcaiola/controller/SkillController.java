@@ -24,12 +24,12 @@ public class SkillController {
 		this.service = service;
 	}
 	
-	@GetMapping
+	@GetMapping("/getall")
 	public List<Skill> obtenerAll(){
 		return service.obtenerAll();
 	}
 	
-	@PostMapping
+	@PostMapping("/crear")
 	public Skill crear(@RequestBody Skill sk) {
 		return service.crear(sk);
 	}
